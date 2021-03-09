@@ -7,12 +7,12 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 
 const routes: Routes = [
-  { path: "main-page", component: MainPageComponent },
-  { path: "error-page", component: ErrorPageComponent },
-  { path: "login-page", component: LoginPageComponent },
-  { path: "search-page", component: SearchPageComponent },
-  { path: "count-page", component: CountPageComponent },
-  { path: "", redirectTo: "/login-page", pathMatch: 'full'}
+  { path: 'main-page', component: MainPageComponent },
+  { path: 'error-page', component: ErrorPageComponent },
+  { path: 'login-page', component: LoginPageComponent },
+  { path: 'search-page', component: SearchPageComponent },
+  { path: 'count-page', component: CountPageComponent },
+  { path: '', redirectTo: '/login-page', pathMatch: 'full'}
 ];
 
 @NgModule({

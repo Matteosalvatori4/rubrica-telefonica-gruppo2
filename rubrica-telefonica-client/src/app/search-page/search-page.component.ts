@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent implements OnInit {
-
+criterio: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line:typedef
+  cerca(){
+  }
+  // tslint:disable-next-line:typedef
+  rimuovi(){
+  }
 }
