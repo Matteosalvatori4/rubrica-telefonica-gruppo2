@@ -1,0 +1,22 @@
+h1 {
+    font-family: "Lucida Handwriting", cursive;
+    color: crimson;
+}
+
+button {
+    margin-left: 105px;
+    background-color: rgba(67, 85, 85, 0.54);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    font-family: "Lucida Handwriting", cursive;
+    padding: 5px 20px;
+}
+
+div {
+    margin-left: 500px;
+    margin-top: 150px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid rgb(41, 43, 41);
+    padding: 50px;
+}

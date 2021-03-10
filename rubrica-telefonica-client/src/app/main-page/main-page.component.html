@@ -1,14 +1,18 @@
-<p>
-    Nome:
-    <input type="text" [(ngModel)]="contatto.nome"> Cognome:
-    <input type="text" [(ngModel)]="contatto.cognome"> Telefono:
-    <input type="text" [(ngModel)]="contatto.numero">
-</p>
-<p>
-    <br>
-    <button (click)="aggiungi()">Aggiungi</button>
-    <button routerLink="/count-page">Conta</button>
-    <button routerLink="/search-page">Ricerca</button>
-</p>
-<app-table-rubrica (cancella)="rimuovi($event)"></app-table-rubrica>
-
+<title>La tua Rubrica</title>
+<div>
+    <p>
+        Nome:
+        <input type="text" [(ngModel)]="contatto.nome">
+        <br> Cognome:
+        <input type="text" [(ngModel)]="contatto.cognome">
+        <br> Telefono:
+        <input type="text" [(ngModel)]="contatto.numero">
+    </p>
+    <p>
+        <br>
+        <button (click)="aggiungi()">Aggiungi</button>
+        <button routerLink="/count-page">Conta</button>
+        <button routerLink="/search-page">Ricerca</button>
+    </p>
+    <app-table-rubrica (cancella)="rimuovi($event)"></app-table-rubrica>
+</div>
