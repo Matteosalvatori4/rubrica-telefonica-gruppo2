@@ -14,24 +14,33 @@ import { RubricaService } from '../rubrica-service.service';
 export class MainPageComponent implements OnInit {
 contatto: Contatto = new Contatto();
 
-  constructor(private http: HttpClient, public rubrica: RubricaService) { }
+  constructor(private http: HttpClient, public rubrica: RubricaService) {
+    this.aggiornaLista();
+  }
 
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef
   aggiungi(){
-    let dto: ContattoDto = new ContattoDto();
+    const dto: ContattoDto = new ContattoDto();
     dto.contatto = this.contatto;
     const oss: Observable<ListaContattiDto> = this.http
-    .post<ListaContattiDto>('http://localhost:8080/aggiungi',dto);
+    .post<ListaContattiDto>('http://localhost:8080/aggiungi', dto);
     oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
+    this.contatto = new Contatto();
   }
   // tslint:disable-next-line:typedef
   rimuovi(c: Contatto){
-    let dto: ContattoDto = new ContattoDto();
+    const dto: ContattoDto = new ContattoDto();
     dto.contatto = c;
     const oss: Observable<ListaContattiDto> = this.http
-    .post<ListaContattiDto>('http://localhost:8080/rimuovi',dto);
+    .post<ListaContattiDto>('http://localhost:8080/rimuovi', dto);
+    oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
+  }
+  // tslint:disable-next-line:typedef
+  aggiornaLista(){
+    const oss: Observable<ListaContattiDto> = this.http
+      .get<ListaContattiDto>('http://localhost:8080/aggiorna');
     oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
   }
 }

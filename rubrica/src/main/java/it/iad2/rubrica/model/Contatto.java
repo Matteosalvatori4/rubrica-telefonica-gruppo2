@@ -36,6 +36,14 @@ public class Contatto {
         this.numero = numero;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNome() {
         return nome;
     }

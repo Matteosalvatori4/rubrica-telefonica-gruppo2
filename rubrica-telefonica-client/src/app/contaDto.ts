@@ -1,3 +1,3 @@
 export class ContaDto{
-    conta : number;
+    contatore: number;
 }
