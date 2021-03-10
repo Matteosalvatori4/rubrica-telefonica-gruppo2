@@ -7,6 +7,7 @@ package it.iad2.rubrica.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -15,13 +16,16 @@ import javax.persistence.Id;
  */
 @Entity
 public class Contatto {
-
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column
+    private String numero;
     @Column
     private String nome;
     @Column
     private String cognome;
-    @Id
-    private String numero;
+
 
     public Contatto() {
     }

@@ -20,7 +20,7 @@ contatto: Contatto = new Contatto();
   }
   // tslint:disable-next-line:typedef
   aggiungi(){
-    let dto: ContattoDto;
+    let dto: ContattoDto = new ContattoDto();
     dto.contatto = this.contatto;
     const oss: Observable<ListaContattiDto> = this.http
     .post<ListaContattiDto>('http://localhost:8080/aggiungi',dto);
@@ -28,11 +28,10 @@ contatto: Contatto = new Contatto();
   }
   // tslint:disable-next-line:typedef
   rimuovi(c: Contatto){
-    let dto: ContattoDto;
+    let dto: ContattoDto = new ContattoDto();
     dto.contatto = c;
     const oss: Observable<ListaContattiDto> = this.http
     .post<ListaContattiDto>('http://localhost:8080/rimuovi',dto);
     oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
-    
   }
 }

@@ -10,8 +10,7 @@ import {RubricaService} from '../rubrica-service.service';
 })
 export class TableRubricaComponent implements OnInit {
   contatti;
-  
-  @Output() rimuovi : EventEmitter<Contatto>= new EventEmitter<Contatto>();
+  @Output() rimuovi: EventEmitter<Contatto> = new EventEmitter<Contatto>();
 
   constructor(public rubrica: RubricaService) {
     this.contatti = rubrica.contatti;

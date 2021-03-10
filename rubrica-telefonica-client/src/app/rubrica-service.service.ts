@@ -9,13 +9,15 @@ import { ListaContattiDto } from './listaContattiDto';
 })
 export class RubricaService {
 contatti: Contatto[];
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient ) {
+    // tslint:disable-next-line:no-unused-expression
     this.aggiornaLista;
    }
 
+  // tslint:disable-next-line:typedef
   aggiornaLista(){
     const oss: Observable<ListaContattiDto> = this.http
     .get<ListaContattiDto>('http://localhost:8080/aggiorna');
-    oss.subscribe(l => this.contatti= l.listaContatti);
+    oss.subscribe(l => this.contatti = l.listaContatti);
   }
 }

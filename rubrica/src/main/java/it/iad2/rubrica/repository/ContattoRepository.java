@@ -12,6 +12,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author lenovo
  */
-public interface ContattoRepository extends JpaRepository<Contatto, String> {
+public interface ContattoRepository extends JpaRepository<Contatto, Long> {
 
 }

@@ -1,5 +1,5 @@
-import { Contatto } from "./contatto";
+import { Contatto } from './contatto';
 
 export class ContattoDto{
-    contatto: Contatto;
+    contatto: Contatto = new Contatto();
 }
