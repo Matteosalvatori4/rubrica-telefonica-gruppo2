@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { CriterioDto } from '../criterioDto';
 import { ListaContattiDto } from '../listaContattiDto';
 import { RubricaService } from '../rubrica-service.service';
+import {Contatto} from '../contatto';
+import {ContattoDto} from '../contattoDto';
 
 @Component({
   selector: 'app-search-page',
@@ -25,6 +27,11 @@ criterio: string;
     oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
   }
   // tslint:disable-next-line:typedef
-  rimuovi(){
+  rimuovi(c: Contatto){
+    const dto: ContattoDto = new ContattoDto();
+    dto.contatto = c;
+    const oss: Observable<ListaContattiDto> = this.http
+      .post<ListaContattiDto>('http://localhost:8080/rimuovi', dto);
+    oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
   }
 }
