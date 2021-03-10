@@ -43,4 +43,9 @@ public class GestioneRubricaServiceImpl implements GestioneRubricaService {
     public long contaElementi() {
         return contattoRepository.count();
     }
+
+    @Override
+    public List<Contatto> cerca(String criterio) {
+      return contattoRepository.findByNomeContainsOrCognomeContainsOrNumeroContains(criterio, criterio, criterio);
+    }
 }

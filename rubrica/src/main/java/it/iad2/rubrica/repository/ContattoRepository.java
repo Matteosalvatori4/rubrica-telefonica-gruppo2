@@ -6,6 +6,7 @@
 package it.iad2.rubrica.repository;
 
 import it.iad2.rubrica.model.Contatto;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -13,5 +14,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author lenovo
  */
 public interface ContattoRepository extends JpaRepository<Contatto, Long> {
-
+    public List<Contatto> findByNomeContainsOrCognomeContainsOrNumeroContains(String nome, String cognome, String  numero);
 }

@@ -7,6 +7,7 @@ package it.iad2.rubrica.controller;
 
 import it.iad2.rubrica.dto.ContaDto;
 import it.iad2.rubrica.dto.ContattoDto;
+import it.iad2.rubrica.dto.CriterioDto;
 import it.iad2.rubrica.dto.ListaContattiDto;
 import it.iad2.rubrica.service.GestioneRubricaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,4 +61,11 @@ public class RubricaController {
 
     }
 
+    @RequestMapping("/cerca")
+    @ResponseBody
+    public ListaContattiDto cercaContatti(@RequestBody CriterioDto dto) {
+        ListaContattiDto lista = new ListaContattiDto();
+        lista.setListaContatti(rubricaService.cerca(dto.getCriterio()));
+        return lista;
+    }
 }
