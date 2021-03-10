@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Contatto} from '../contatto';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
+import { ContattoDto } from '../contattoDto';
+import { Observable } from 'rxjs';
+import { ListaContattiDto } from '../listaContattiDto';
+import { RubricaService } from '../rubrica-service.service';
 
 @Component({
   selector: 'app-main-page',
@@ -10,14 +14,25 @@ import {HttpClientModule} from '@angular/common/http';
 export class MainPageComponent implements OnInit {
 contatto: Contatto = new Contatto();
 
-  constructor(private http: HttpClientModule) { }
+  constructor(private http: HttpClient, public rubrica: RubricaService) { }
 
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef
   aggiungi(){
+    let dto: ContattoDto;
+    dto.contatto = this.contatto;
+    const oss: Observable<ListaContattiDto> = this.http
+    .post<ListaContattiDto>('http://localhost:8080/aggiungi',dto);
+    oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
   }
   // tslint:disable-next-line:typedef
-  rimuovi(){
+  rimuovi(c: Contatto){
+    let dto: ContattoDto;
+    dto.contatto = c;
+    const oss: Observable<ListaContattiDto> = this.http
+    .post<ListaContattiDto>('http://localhost:8080/rimuovi',dto);
+    oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
+    
   }
 }

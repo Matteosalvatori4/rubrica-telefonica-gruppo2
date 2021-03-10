@@ -1,15 +1,13 @@
 <p>
-Nome:
-<input type="text" [(ngModel)]="contatto.nome">
-Cognome:
-<input type="text" [(ngModel)]="contatto.cognome">
-Telefono:
-<input type="text" [(ngModel)]="contatto.telefono">
+    Nome:
+    <input type="text" [(ngModel)]="contatto.nome"> Cognome:
+    <input type="text" [(ngModel)]="contatto.cognome"> Telefono:
+    <input type="text" [(ngModel)]="contatto.telefono">
 </p>
 <p>
-<br>
-<button (click)="aggiungi()" >Aggiungi</button>
-<button routerLink="/count-page">Conta</button>
-<button routerLink="/search-page">Ricerca</button>
+    <br>
+    <button (click)="aggiungi()">Aggiungi</button>
+    <button routerLink="/count-page">Conta</button>
+    <button routerLink="/search-page">Ricerca</button>
 </p>
-<app-table-rubrica></app-table-rubrica>
+<app-table-rubrica (rimuovi)="rimuovi($event)"></app-table-rubrica>

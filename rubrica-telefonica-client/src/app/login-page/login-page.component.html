@@ -1,6 +1,6 @@
-<p>inserire credenziali accesso:</p>
-<input type="text" placeholder="username" [(ngModel)] = "utente.username">
+<h1 style="text-align:center;">Inserire le tue credenziali d'accesso:</h1>
+<input type="text" placeholder="username" [(ngModel)]="utente.username">
 <br>
-<p> <input type="password" placeholder="password" [(ngModel)] = "utente.password"> </p>
+<p> <input type="password" placeholder="password" [(ngModel)]="utente.password"> </p>
 <br>
-<button (click) = "login()">Accedi</button>
+<button (click)="login()"> Accedi </button>
