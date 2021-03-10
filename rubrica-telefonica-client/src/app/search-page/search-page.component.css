@@ -1,0 +1,42 @@
+div {
+    margin-left: 300px;
+    margin-top: 150px;
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid rgb(41, 43, 41);
+    padding: 150px;
+}
+
+button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    background-color: rgba(67, 85, 85, 0.54);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    font-family: "Copperplate";
+    padding: 5px 20px;
+}
+
+#c {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    background-color: rgba(67, 85, 85, 0.54);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    font-family: "Copperplate";
+    padding: 5px 20px;
+}
+
+input {
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: rgba(67, 85, 85, 0.54);
+    border-color: rgb(0, 0, 0);
+    border-style: outset;
+    font-size: 12px;
+    font-family: "Copperplate";
+    border-width: 2px;
+    padding: 5px 40px;
+}

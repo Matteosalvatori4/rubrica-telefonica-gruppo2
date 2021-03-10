@@ -4,13 +4,14 @@ input {
     border-color: rgb(0, 0, 0);
     border-style: outset;
     font-size: 12px;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
     border-width: 2px;
+    padding: 5px 40px;
 }
 
 div {
-    margin-left: 350px;
-    margin-top: 150px;
+    margin-left: 300px;
+    margin-top: 50px;
     background-color: lightgrey;
     width: 300px;
     border: 15px solid rgb(41, 43, 41);
@@ -18,10 +19,24 @@ div {
 }
 
 button {
-    margin-left: 10px;
+    margin-left: 5px;
     background-color: rgba(67, 85, 85, 0.54);
     border-color: rgb(0, 0, 0);
     border-style: solid;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
     padding: 5px 20px;
+}
+
+td {
+    font-size: 20px;
+    font-family: "Copperplate";
+}
+
+h1 {
+    font-family: "Copperplate";
+    margin-left: 35px;
+}
+
+i {
+    margin-left: 120px;
 }

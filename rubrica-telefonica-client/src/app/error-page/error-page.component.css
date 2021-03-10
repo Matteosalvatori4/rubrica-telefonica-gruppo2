@@ -1,14 +1,16 @@
 h1 {
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
     color: crimson;
 }
 
 button {
-    margin-left: 105px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 85px;
     background-color: rgba(67, 85, 85, 0.54);
     border-color: rgb(0, 0, 0);
     border-style: solid;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
     padding: 5px 20px;
 }
 
@@ -19,4 +21,8 @@ div {
     width: 300px;
     border: 15px solid rgb(41, 43, 41);
     padding: 50px;
+}
+
+i {
+    margin-left: 110px;
 }

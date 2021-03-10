@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div>
-    <h1 style="text-align:center;">Inserire le tue credenziali d'accesso:</h1>
+    <h1 style="text-align:center;">Inserisci le tue credenziali </h1>
     <input type="text" placeholder="username" [(ngModel)]="utente.username">
+    <i class="material-icons">perm_identity</i>
     <br>
-    <p> <input type="password" placeholder="password" [(ngModel)]="utente.password"> </p>
+    <p> <input type="password" placeholder="password" [(ngModel)]="utente.password">
+        <i class="material-icons">https</i></p>
     <br>
     <button (click)="login()"> Accedi </button>
 </div>

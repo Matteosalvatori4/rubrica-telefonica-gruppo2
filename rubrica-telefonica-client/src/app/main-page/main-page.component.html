@@ -1,18 +1,31 @@
-<title>La tua Rubrica</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div>
-    <p>
-        Nome:
-        <input type="text" [(ngModel)]="contatto.nome">
-        <br> Cognome:
-        <input type="text" [(ngModel)]="contatto.cognome">
-        <br> Telefono:
-        <input type="text" [(ngModel)]="contatto.numero">
-    </p>
+    <i class="material-icons" style="font-size:80px;">account_circle</i>
+    <h1>La mia rubrica</h1>
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td> <input type="text" [(ngModel)]="contatto.nome"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Cognome:</td>
+            <td> <input type="text" [(ngModel)]="contatto.cognome"></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Telefono:</td>
+            <td><input type="text" [(ngModel)]="contatto.numero"></td>
+        </tr>
+    </table>
     <p>
         <br>
+
         <button (click)="aggiungi()">Aggiungi</button>
         <button routerLink="/count-page">Conta</button>
         <button routerLink="/search-page">Ricerca</button>
     </p>
+
+
     <app-table-rubrica (cancella)="rimuovi($event)"></app-table-rubrica>
 </div>

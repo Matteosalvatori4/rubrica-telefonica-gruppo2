@@ -1,4 +1,9 @@
-<input type="text" placeholder="Criterio di ricerca" [(ngModel)]="criterio">
-<button (click)="cerca()">Cerca</button>
-<button routerLink="/main-page">Main page</button>
-<app-table-rubrica (cancella)="rimuovi($event)"></app-table-rubrica>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<div>
+    <input style="text-align:center;" type="text" placeholder="Criterio di ricerca" [(ngModel)]="criterio">
+    <button id="c" (click)="cerca()">Cerca</button>
+    <i class="material-icons">search</i>
+    <button routerLink="/main-page">Home</button>
+    <i class="material-icons">home</i>
+    <app-table-rubrica (cancella)="rimuovi($event)"></app-table-rubrica>
+</div>

@@ -1,5 +1,5 @@
 h1 {
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
 }
 
 button {
@@ -7,13 +7,13 @@ button {
     background-color: rgba(67, 85, 85, 0.54);
     border-color: rgb(0, 0, 0);
     border-style: solid;
-    font-family: "Lucida Handwriting", cursive;
+    font-family: "Copperplate";
     padding: 5px 20px;
 }
 
 input {
     margin-left: 70px;
-    font-family: "Times New Roman", cursive;
+    font-family: "Copperplate";
     border-color: rgb(0, 0, 0);
     border-style: solid;
 }
