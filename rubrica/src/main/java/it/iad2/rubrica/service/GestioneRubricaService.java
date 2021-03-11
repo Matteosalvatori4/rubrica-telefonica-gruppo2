@@ -23,5 +23,4 @@ public interface GestioneRubricaService {
     long contaElementi();
     
     List<Contatto> cerca(String criterio);
-
 }

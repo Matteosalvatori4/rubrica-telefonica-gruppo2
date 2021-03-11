@@ -6,6 +6,7 @@ import { ListaContattiDto } from '../listaContattiDto';
 import { RubricaService } from '../rubrica-service.service';
 import {Contatto} from '../contatto';
 import {ContattoDto} from '../contattoDto';
+import {CriterioContattoDto} from '../CriterioContattoDto';
 
 @Component({
   selector: 'app-search-page',
@@ -14,12 +15,14 @@ import {ContattoDto} from '../contattoDto';
 })
 export class SearchPageComponent implements OnInit {
 criterio: string;
+
   constructor(private http: HttpClient, public rubrica: RubricaService) { }
 
   ngOnInit(): void {
   }
   // tslint:disable-next-line:typedef
   cerca(){
+    // tslint:disable-next-line:new-parens
     const dto: CriterioDto = new CriterioDto;
     dto.criterio = this.criterio;
     const oss: Observable<ListaContattiDto> = this.http
@@ -28,10 +31,11 @@ criterio: string;
   }
   // tslint:disable-next-line:typedef
   rimuovi(c: Contatto){
-    const dto: ContattoDto = new ContattoDto();
+    const dto: CriterioContattoDto = new CriterioContattoDto();
     dto.contatto = c;
+    dto.criterio = this.criterio;
     const oss: Observable<ListaContattiDto> = this.http
-      .post<ListaContattiDto>('http://localhost:8080/rimuovi', dto);
+      .post<ListaContattiDto>('http://localhost:8080/rimuovi-filtrati', dto);
     oss.subscribe(l => this.rubrica.contatti = l.listaContatti);
   }
 }

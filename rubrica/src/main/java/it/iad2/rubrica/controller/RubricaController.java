@@ -5,10 +5,7 @@
  */
 package it.iad2.rubrica.controller;
 
-import it.iad2.rubrica.dto.ContaDto;
-import it.iad2.rubrica.dto.ContattoDto;
-import it.iad2.rubrica.dto.CriterioDto;
-import it.iad2.rubrica.dto.ListaContattiDto;
+import it.iad2.rubrica.dto.*;
 import it.iad2.rubrica.service.GestioneRubricaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -65,6 +62,15 @@ public class RubricaController {
     @ResponseBody
     public ListaContattiDto cercaContatti(@RequestBody CriterioDto dto) {
         ListaContattiDto lista = new ListaContattiDto();
+        lista.setListaContatti(rubricaService.cerca(dto.getCriterio()));
+        return lista;
+    }
+
+    @RequestMapping("/rimuovi-filtrati")
+    @ResponseBody
+    public ListaContattiDto rimuoviFiltratiContatto(@RequestBody CriterioContattoDto dto) {
+        ListaContattiDto lista = new ListaContattiDto();
+        rubricaService.rimuovi(dto.getContatto());
         lista.setListaContatti(rubricaService.cerca(dto.getCriterio()));
         return lista;
     }

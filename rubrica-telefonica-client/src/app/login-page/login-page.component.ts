@@ -16,8 +16,9 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
   login(){
-    if(this.utente.password == "1"){
+    if (this.utente.username === 'Gruppo_2' && this.utente.password === 'ngbananainthebox'){
       this.router.navigateByUrl('/main-page');
     }else{
       this.router.navigateByUrl('/error-page');
